@@ -28,7 +28,7 @@
     "test:watch": "vitest",
     "start": "node dist/cli.js",
     "clean": "rm -rf dist",
-    "prepare": "npm ci --include=dev --ignore-scripts && npm run build",
+    "prepare": "npm_config_global=false npm ci --include=dev --ignore-scripts && npm run build",
     "prepublishOnly": "npm run build",
     "postinstall": "echo '\n  continues v3.0.0 — Major refactor with typed schemas, library exports & Cursor support!\n  Run `continues list` to see all sessions.\n'",
     "lint": "biome check src/",
